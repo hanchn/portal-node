@@ -1,5 +1,5 @@
 export default {
-    database: 'monitoring',
+    database: 'portal',
     username: 'root',
     userpwd: 'root',
     dialect: 'mysql',
