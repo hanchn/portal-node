@@ -25,7 +25,57 @@ export const exportModels = async() => {
             table: TABLE_NAME,
             model
         })
-        fs.writeFileSync(`./Model/${titleCase([TABLE_NAME])}.js`, tpl)
+        const name = titleCase([TABLE_NAME])
+        try {
+            fs.statSync(`./control/${name}.js`)
+        } catch (err) {
+            fs.writeFileSync(`./control/${name}.js`, `import ${name} from '../model/${name}.js'
+import Exceptions from '../exception/index.js'
+/**
+ * find${name}
+ * params: {}
+ */
+export const find${name} = (params = {}) => {}
+
+/**
+ * add${name}
+ * params: {}
+ */
+export const add${name} = (params = {}) => {}
+
+/**
+ * update${name}
+ * params: {}
+ */
+export const update${name} = (params = {}) => {}
+
+/**
+ * delete${name}
+ * params: {}
+ */
+export const delete${name} = (params = {}) => {}
+            `)
+        }
+        try {
+            fs.statSync(`./routes/${name}.js`)
+        } catch (err) {
+            fs.writeFileSync(`./routes/${name}.js`, `import express from 'express'
+import { find${name}, add${name}, update${name}, delete${name} } from '../model/${name}.js'
+
+router.get('/${name}', async(req, res, next) => {})
+router.post('/${name}', async(req, res, next) => {})
+router.get('/find${name}', async(req, res, next) => {})
+router.post('/add${name}', async(req, res, next) => {})
+router.post('/update${name}', async(req, res, next) => {})
+router.post('/delete${name}', async(req, res, next) => {})
+
+export const find${name} = () => {}
+const router = express.Router()
+export default router
+            `)
+        }
+
+        fs.writeFileSync(`./model/${titleCase([TABLE_NAME])}.js`, tpl)
     })
 }
 
