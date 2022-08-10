@@ -68,8 +68,6 @@ router.get('/find${name}', async(req, res, next) => {})
 router.post('/add${name}', async(req, res, next) => {})
 router.post('/update${name}', async(req, res, next) => {})
 router.post('/delete${name}', async(req, res, next) => {})
-
-export const find${name} = () => {}
 const router = express.Router()
 export default router
             `)

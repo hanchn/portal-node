@@ -7,8 +7,6 @@ router.get('/findRole', async(req, res, next) => {})
 router.post('/addRole', async(req, res, next) => {})
 router.post('/updateRole', async(req, res, next) => {})
 router.post('/deleteRole', async(req, res, next) => {})
-
-export const findRole = () => {}
 const router = express.Router()
 export default router
             

@@ -7,8 +7,6 @@ router.get('/findUser', async(req, res, next) => {})
 router.post('/addUser', async(req, res, next) => {})
 router.post('/updateUser', async(req, res, next) => {})
 router.post('/deleteUser', async(req, res, next) => {})
-
-export const findUser = () => {}
 const router = express.Router()
 export default router
             

@@ -7,8 +7,6 @@ router.get('/findUserMenu', async(req, res, next) => {})
 router.post('/addUserMenu', async(req, res, next) => {})
 router.post('/updateUserMenu', async(req, res, next) => {})
 router.post('/deleteUserMenu', async(req, res, next) => {})
-
-export const findUserMenu = () => {}
 const router = express.Router()
 export default router
             

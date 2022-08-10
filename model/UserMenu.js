@@ -1,39 +1,41 @@
-import { DataTypes } from "sequelize"
-import { sequelize } from '../utils/Conn.js'
-export default sequelize('userMenu', {
-    id: {
+
+    import { DataTypes } from "sequelize"
+    import { sequelize } from '../utils/Conn.js'
+    export default sequelize('userMenu', 
+    {
+        id: {
         allowNull: true,
-        comment: "唯一序号",
-        type: DataTypes.INTEGER,
-        unique: false,
-        primaryKey: true
+                    comment: "唯一序号",
+                    type: DataTypes.INTEGER,
+                    unique: false,
+                    primaryKey: true
     },
-    menu_id: {
+        menu_id: {
         allowNull: true,
-        comment: "菜单id",
-        type: DataTypes.INTEGER,
-        unique: false,
-        primaryKey: false
+                    comment: "菜单id",
+                    type: DataTypes.INTEGER,
+                    unique: false,
+                    primaryKey: false
     },
-    parent_id: {
+        parent_id: {
         allowNull: true,
-        comment: "菜单的父id",
-        type: DataTypes.INTEGER,
-        unique: false,
-        primaryKey: false
+                    comment: "菜单的父id",
+                    type: DataTypes.INTEGER,
+                    unique: false,
+                    primaryKey: false
     },
-    relation: {
+        relation: {
         allowNull: true,
-        comment: "菜单关联关系",
-        type: DataTypes.STRING,
-        unique: false,
-        primaryKey: false
+                    comment: "菜单关联关系",
+                    type: DataTypes.STRING,
+                    unique: false,
+                    primaryKey: false
     },
-    user_id: {
+        user_id: {
         allowNull: true,
-        comment: "用户id",
-        type: DataTypes.INTEGER,
-        unique: false,
-        primaryKey: false
+                    comment: "用户id",
+                    type: DataTypes.INTEGER,
+                    unique: false,
+                    primaryKey: false
     },
-})
+    })
