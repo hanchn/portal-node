@@ -1,10 +1,10 @@
 export default {
     database: 'monitoring',
-    username: 'frontend_common',
-    userpwd: 'AAQ%V3V4w1@4gc5V',
+    username: 'root',
+    userpwd: 'root',
     dialect: 'mysql',
-    host: 'rm-bp16em8u9zcjmw6w9.mysql.rds.aliyuncs.com',
+    host: 'localhost',
     port: 3306,
     logging: false,
-    env: 3000,
+    env: 3000
 }
