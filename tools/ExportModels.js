@@ -84,6 +84,6 @@ const exportTpl = (params) =>
 
 const titleCase = (strList) => {
     let str = strList[0]
-    let newStr = str.slice(0, 1).toUpperCase() + str.slice(1).toLowerCase();
+    let newStr = str.slice(0, 1).toUpperCase() + str.slice(1);
     return newStr;
 }

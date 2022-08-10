@@ -1,46 +1,46 @@
 
     import { DataTypes } from "sequelize"
     import { sequelize } from '../utils/Conn.js'
-    export default sequelize('errors', 
+    export default sequelize('user', 
     {
-        column: {
+        avatar: {
         allowNull: true,
-                    comment: "",
-                    type: DataTypes.STRING,
-                    unique: false,
-                    primaryKey: false
-    },
-        description: {
-        allowNull: true,
-                    comment: "描述",
+                    comment: "头像",
                     type: DataTypes.STRING,
                     unique: false,
                     primaryKey: false
     },
         id: {
         allowNull: true,
-                    comment: "",
+                    comment: "用户id",
                     type: DataTypes.INTEGER,
                     unique: false,
                     primaryKey: true
     },
-        line: {
+        name: {
         allowNull: true,
-                    comment: "",
+                    comment: "昵称",
                     type: DataTypes.STRING,
                     unique: false,
                     primaryKey: false
     },
-        source: {
+        role_id: {
         allowNull: true,
-                    comment: "来源",
+                    comment: "角色id",
+                    type: DataTypes.INTEGER,
+                    unique: false,
+                    primaryKey: false
+    },
+        username: {
+        allowNull: true,
+                    comment: "用户名",
                     type: DataTypes.STRING,
                     unique: false,
                     primaryKey: false
     },
-        url: {
+        userpwd: {
         allowNull: true,
-                    comment: "",
+                    comment: "用户密码",
                     type: DataTypes.STRING,
                     unique: false,
                     primaryKey: false
