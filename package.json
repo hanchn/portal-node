@@ -1,0 +1,42 @@
+{
+    "name": "monitoring-node",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development node ./www/index.js",
+        "test": "cross-env NODE_ENV=test pm2 restart --name workflow-system ./logs/app.log",
+        "pre": "cross-env NODE_ENV=pre pm2 restart--name workflow-system",
+        "production": "cross-env NODE_ENV=production pm2 start --name workflow-system ./www/index.js",
+        "model": "cross-env NODE_ENV=development node ./Tools/ExportModels.js",
+        "stop": "pm2 stop workflow-system",
+        "restart": "pm2 restart workflow-system"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://gitee.com/auvweb/my-blog.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.0",
+        "cors": "^2.8.5",
+        "cross-env": "^7.0.3",
+        "express": "^4.18.1",
+        "express-fileupload": "^1.4.0",
+        "jsonFile": "^6.1.0",
+        "lighthouse": "^9.6.3",
+        "md5-node": "^1.0.1",
+        "mysql": "^2.18.1",
+        "mysql2": "^2.3.3",
+        "pm2": "^5.2.0",
+        "puppeteer": "^15.3.1",
+        "sequelize": "^6.20.1",
+        "sequelize-auto": "^0.8.8",
+        "sqlite3": "^5.0.8",
+        "url": "^0.11.0",
+        "xlsx": "^0.18.5"
+    },
+    "projectId": "19"
+}
