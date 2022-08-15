@@ -1,15 +1,8 @@
 
     import { DataTypes } from "sequelize"
     import { sequelize } from '../utils/Conn.js'
-    export default sequelize('user', 
+    export default sequelize('login', 
     {
-        avatar: {
-        allowNull: true,
-                    comment: "头像",
-                    type: DataTypes.STRING,
-                    unique: false,
-                    primaryKey: false
-    },
         createdAt: {
         allowNull: true,
                     comment: "",
@@ -19,22 +12,15 @@
     },
         id: {
         allowNull: true,
-                    comment: "用户id",
+                    comment: "",
                     type: DataTypes.INTEGER,
                     unique: false,
                     primaryKey: true
     },
-        name: {
+        key: {
         allowNull: true,
-                    comment: "昵称",
+                    comment: "",
                     type: DataTypes.STRING,
-                    unique: false,
-                    primaryKey: false
-    },
-        role_id: {
-        allowNull: true,
-                    comment: "角色id",
-                    type: DataTypes.INTEGER,
                     unique: false,
                     primaryKey: false
     },
@@ -49,20 +35,6 @@
         allowNull: true,
                     comment: "",
                     type: DataTypes.DATE,
-                    unique: false,
-                    primaryKey: false
-    },
-        username: {
-        allowNull: true,
-                    comment: "用户名",
-                    type: DataTypes.STRING,
-                    unique: false,
-                    primaryKey: false
-    },
-        userpwd: {
-        allowNull: true,
-                    comment: "用户密码",
-                    type: DataTypes.STRING,
                     unique: false,
                     primaryKey: false
     },
